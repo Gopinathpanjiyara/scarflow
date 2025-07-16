@@ -68,7 +68,7 @@ export function ComparisonSection() {
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">The Right Match for Everyone</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Whether you're hiring or looking for work, Scarflow creates the perfect environment for success.
+            Whether you&apos;re hiring or looking for work, Scarflow creates the perfect environment for success.
           </p>
         </div>
         

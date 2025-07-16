@@ -44,7 +44,7 @@ export function PromiseSection() {
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">The Scarflow Promise</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            We're building a trust-first platform that eliminates scams and creates real opportunities.
+            We&apos;re building a trust-first platform that eliminates scams and creates real opportunities.
           </p>
         </div>
 
