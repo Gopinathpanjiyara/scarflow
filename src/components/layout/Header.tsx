@@ -121,7 +121,7 @@ export function Header() {
       {isMenuOpen && (
         <div 
           ref={menuRef}
-          className="md:hidden fixed inset-0 bg-white z-10 pt-20 px-4 pb-6 flex flex-col"
+          className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-md shadow-lg z-10 pt-20 px-4 pb-6 flex flex-col"
         >
           <nav className="flex flex-col space-y-4">
             <button 
