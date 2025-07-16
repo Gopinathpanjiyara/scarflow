@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Scarflow - Redefining Startup Hiring
+
+Scarflow is a trust-first startup hiring platform where verified startups meet startup-ready talent.
+
+## About the Project
+
+This is a modern landing page for Scarflow built with Next.js, Tailwind CSS, and Framer Motion. The design follows a clean, futuristic aesthetic with a focus on trust and verification in the startup hiring process.
+
+## Tech Stack
+
+- **Frontend Framework**: [Next.js](https://nextjs.org/)
+- **CSS Framework**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+## Features
+
+- Responsive design that works on all devices
+- Modern UI with glass-morphism effects
+- Smooth animations and transitions
+- Interactive components
+- Performance optimized
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.x or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/scarflow.git
+cd scarflow
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app`: Next.js app router files
+- `src/components/layout`: Layout components (Header, Footer)
+- `src/components/sections`: Page section components
+- `src/components/ui`: Reusable UI components
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project can be easily deployed on [Vercel](https://vercel.com/) or any other hosting platform that supports Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Deploy on Vercel
+## Acknowledgements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Design inspiration from Notion, Linear, and Figma
+- Icons from Lucide React
+- UI components from shadcn/ui
