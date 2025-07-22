@@ -24,16 +24,19 @@ export function Navbar() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link href="#home" className="text-sm font-medium hover:text-blue-600 transition-colors">
+          <Link href="/#home" className="text-sm font-medium hover:text-blue-600 transition-colors">
             Home
           </Link>
-          <Link href="#for-startups" className="text-sm font-medium hover:text-blue-600 transition-colors">
+          <Link href="/#for-startups" className="text-sm font-medium hover:text-blue-600 transition-colors">
             For Startups
           </Link>
-          <Link href="#for-talent" className="text-sm font-medium hover:text-blue-600 transition-colors">
+          <Link href="/#for-talent" className="text-sm font-medium hover:text-blue-600 transition-colors">
             For Talent
           </Link>
-          <Link href="#how-it-works" className="text-sm font-medium hover:text-blue-600 transition-colors">
+          <Link href="/carriers" className="text-sm font-medium hover:text-blue-600 transition-colors">
+            Carriers
+          </Link>
+          <Link href="/#how-it-works" className="text-sm font-medium hover:text-blue-600 transition-colors">
             How It Works
           </Link>
         </div>
@@ -77,28 +80,35 @@ export function Navbar() {
         <div className="md:hidden mt-4 py-4 border-t border-gray-100">
           <div className="flex flex-col space-y-4">
             <Link 
-              href="#home" 
+              href="/#home" 
               className="text-sm font-medium hover:text-blue-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
-              href="#for-startups" 
+              href="/#for-startups" 
               className="text-sm font-medium hover:text-blue-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               For Startups
             </Link>
             <Link 
-              href="#for-talent" 
+              href="/#for-talent" 
               className="text-sm font-medium hover:text-blue-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               For Talent
             </Link>
             <Link 
-              href="#how-it-works" 
+              href="/carriers" 
+              className="text-sm font-medium hover:text-blue-600 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Carriers
+            </Link>
+            <Link 
+              href="/#how-it-works" 
               className="text-sm font-medium hover:text-blue-600 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
