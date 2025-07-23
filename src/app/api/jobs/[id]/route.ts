@@ -5,20 +5,20 @@ import { ObjectId } from 'mongodb';
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
     await connectDB();
 
     // Validate ID format
-    if (!ObjectId.isValid(params.id)) {
+    if (!ObjectId.isValid(context.params.id)) {
       return NextResponse.json(
         { error: 'Invalid job ID format' },
         { status: 400 }
       );
     }
 
-    const job = await Job.findById(params.id);
+    const job = await Job.findById(context.params.id);
 
     if (!job) {
       return NextResponse.json(

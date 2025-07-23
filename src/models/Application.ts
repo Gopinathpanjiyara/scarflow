@@ -1,5 +1,9 @@
 import mongoose from 'mongoose';
 
+interface IApplication {
+  isInternship: boolean;
+}
+
 const applicationSchema = new mongoose.Schema({
   jobId: {
     type: mongoose.Schema.Types.ObjectId,
@@ -37,7 +41,7 @@ const applicationSchema = new mongoose.Schema({
   },
   university: {
     type: String,
-    required: function(this: any) {
+    required: function(this: IApplication) {
       return this.isInternship;
     },
     trim: true,
