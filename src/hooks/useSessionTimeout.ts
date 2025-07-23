@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 
 const TIMEOUT_DURATION = 3 * 60 * 1000; // 3 minutes in milliseconds
@@ -7,7 +7,7 @@ export function useSessionTimeout() {
   const router = useRouter();
   const timeoutRef = useRef<NodeJS.Timeout>();
 
-  const resetTimeout = () => {
+  const resetTimeout = useCallback(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -22,7 +22,7 @@ export function useSessionTimeout() {
         console.error('Error logging out:', error);
       }
     }, TIMEOUT_DURATION);
-  };
+  }, [router]);
 
   useEffect(() => {
     // Set up event listeners for user activity
@@ -57,7 +57,7 @@ export function useSessionTimeout() {
         document.removeEventListener(event, handleActivity);
       });
     };
-  }, [router]);
+  }, [resetTimeout]); // Added resetTimeout to dependencies
 
   return resetTimeout;
 } 

@@ -18,6 +18,7 @@ export async function GET(request: Request) {
 
     return NextResponse.json({ authenticated: true });
   } catch (error) {
-    return NextResponse.json({ authenticated: false });
+    console.error('Error checking admin auth:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
 } 

@@ -1,5 +1,9 @@
 import mongoose from 'mongoose';
 
+interface IJob {
+  isInternship: boolean;
+}
+
 const jobSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -35,21 +39,21 @@ const jobSchema = new mongoose.Schema({
   },
   duration: {
     type: String,
-    required: function(this: any) { 
+    required: function(this: IJob) { 
       return this.isInternship;
     },
     trim: true,
   },
   salary: {
     type: String,
-    required: function(this: any) { 
+    required: function(this: IJob) { 
       return !this.isInternship;
     },
     trim: true,
   },
   compensation: {
     type: String,
-    required: function(this: any) { 
+    required: function(this: IJob) { 
       return this.isInternship;
     },
     trim: true,

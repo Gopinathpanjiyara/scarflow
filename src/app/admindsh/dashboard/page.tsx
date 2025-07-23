@@ -13,22 +13,17 @@ import { Badge } from "@/components/ui/badge";
 import {
   Briefcase,
   GraduationCap,
-  Plus,
   Pencil,
   Trash2,
   Mail,
   Phone,
   FileText,
-  Clock,
-  CheckCircle,
-  XCircle
 } from "lucide-react";
 
 export default function AdminDashboard() {
   const [jobs, setJobs] = useState<Job[]>([]);
   const [internships, setInternships] = useState<Job[]>([]);
   const [applications, setApplications] = useState<Application[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
   const [currentJob, setCurrentJob] = useState<Job | null>(null);
   const [activeTab, setActiveTab] = useState("jobs");
@@ -57,7 +52,7 @@ export default function AdminDashboard() {
     } catch (error) {
       console.error('Error fetching applications:', error);
     } finally {
-      setIsLoading(false);
+      // setIsLoading(false); // This line was removed as per the edit hint
     }
   };
 
@@ -489,7 +484,7 @@ export default function AdminDashboard() {
                             <h4 className="font-medium mb-2">Applied For:</h4>
                             <div className="flex items-center gap-2 text-gray-600">
                               <Briefcase className="w-4 h-4" />
-                              <span>{(application.jobId as any).title} at {(application.jobId as any).company}</span>
+                              <span>{(application.jobId as Job).title} at {(application.jobId as Job).company}</span>
                             </div>
                           </div>
 

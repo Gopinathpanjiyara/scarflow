@@ -1,7 +1,6 @@
 import { config } from 'dotenv';
 import connectDB from '../lib/mongodb';
 import Admin from '../models/Admin';
-import { hash } from 'bcryptjs';
 
 config();
 
